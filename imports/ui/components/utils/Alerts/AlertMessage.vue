@@ -74,6 +74,17 @@ export default {
             this.mode= '';
             this.timeout = 6000;
             this.snackbar = true
+        },
+        showAlertFull(icon, color, title, mode, timeout, x,y, text = null){
+            this.icon = icon;
+            this.color = color;
+            this.text = text;
+            this.mode = mode;
+            this.timeout = timeout;
+            this.x = x;
+            this.y = y;
+            this.snackbar = true;
+            this.title = title
         }
     },
 }
@@ -82,5 +93,9 @@ export default {
 <style scoped>
     .v-tooltip__content, v-tooltip__content--fixed{
         z-index: 80000000 !important;
+    }
+
+    .v-snack__content{
+        padding: 0 !important;
     }
 </style>

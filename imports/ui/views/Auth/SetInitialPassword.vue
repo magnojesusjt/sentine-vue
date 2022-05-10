@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="title">
-            Resetar senha
+            Definir senha
         </div>
-        <v-form @submit.prevent="resetPassword">
+        <v-form @submit.prevent="setPassword">
             <v-text-field v-model="user.password" id="inputPassword"
                         :append-icon="showPass.new?'mdi-eye':'mdi-eye-off'"
                         :type="showPass.new?'text':'password'"
@@ -21,8 +21,8 @@
 
             </v-text-field>
             <div>
-                <div class="d-flex start">
-                    <v-btn type="submit" color='primary' rounded>Enviar</v-btn>
+                <div class="d-flex justify-start mt-0">
+                    <v-btn type="submit" color='primary' rounded>Definir senha</v-btn>
                 </div>
             </div>
         </v-form>
@@ -31,7 +31,7 @@
 
 <script>
 export default ({
-    name:'ResetPassword',
+    name:'SetInitialPassword',
     data(){
         return {
             user:{
